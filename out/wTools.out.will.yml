@@ -3,8 +3,8 @@ root:
   - wTools.out
 consistency:
   ../will.yml: &ref_0
-    hash: 56cfe5ceaace9b480bf922d91b224606
-    size: 8820
+    hash: 292a4d4f1cdc41b62f9ada960cc767ca
+    size: 8861
 module:
   wTools.out:
     about:
@@ -113,6 +113,8 @@ module:
         path: '{path::out}/release.test'
       out.release.min:
         path: '{path::out}/release.min'
+      npm.publish:
+        path: '../module/js/{about::name}'
       npm.proto.entry:
         path:
           - ../proto/wtools/abase/l1/Include.s
@@ -555,8 +557,6 @@ module:
           - ../proto/wtools/abase/l1.test/Str.test.s
           - ../proto/wtools/abase/l1.test/TreeMap.test.s
           - ../proto/wtools/abase/l1.test/Trie.test.s
-          - ../proto/wtools/amid
-          - ../proto/wtools/atop
     submodule:
       wTesting:
         path: 'npm:///wTesting'
@@ -1289,6 +1289,8 @@ module:
         path: '{path::out}/release.test'
       out.release.min:
         path: '{path::out}/release.min'
+      npm.publish:
+        path: 'module/js/{about::name}'
       npm.proto.entry:
         path:
           - proto/wtools/abase/l1/Include.s
@@ -1884,5 +1886,5 @@ module:
           - 'step::reflect.rust.modules'
     consistency:
       ../will.yml:
-        hash: 56cfe5ceaace9b480bf922d91b224606
-        size: 8820
+        hash: 292a4d4f1cdc41b62f9ada960cc767ca
+        size: 8861
